@@ -2,9 +2,10 @@
 * @Author: shengxingyue
 * @Date:   2017-10-14 20:15:30
 * @Last Modified by:   shengxingyue
-* @Last Modified time: 2017-10-15 13:59:30
+* @Last Modified time: 2017-10-15 14:14:52
 */
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const config = {
 	entry: {
 		app: './src/index.js',
@@ -30,7 +31,10 @@ const config = {
 	},
 
 	plugins: [
-		new ExtractTextPlugin('style.css')
+		new ExtractTextPlugin('style.css'),
+		new HtmlWebpackPlugin({
+			title: "Output Management"
+		})
 	]
 };
 module.exports = config;
