@@ -2,7 +2,7 @@
 * @Author: shengxingyue
 * @Date:   2017-10-14 20:15:30
 * @Last Modified by:   shengxingyue
-* @Last Modified time: 2017-10-15 14:23:42
+* @Last Modified time: 2017-10-15 14:28:52
 */
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -37,6 +37,9 @@ const config = {
 			title: "Output Management"
 		}),
 		new CleanWebpackPlugin(['dist'])
-	]
+	],
+
+	// 开发环境用于追踪问题代码的位置
+	devtool: 'inline-source-map'
 };
 module.exports = config;
