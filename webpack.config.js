@@ -2,7 +2,7 @@
 * @Author: shengxingyue
 * @Date:   2017-10-14 20:15:30
 * @Last Modified by:   shengxingyue
-* @Last Modified time: 2017-10-15 12:49:42
+* @Last Modified time: 2017-10-15 13:48:31
 */
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const config = {
@@ -15,10 +15,14 @@ const config = {
 
 	module: {
 		rules : [
-			{test: /\.css$/, use: ExtractTextPlugin.extract({
-          			fallback: "style-loader",
-          			use: "css-loader"
-        	})}
+			{
+				test: /\.css$/, 
+				use: ExtractTextPlugin.extract({fallback: "style-loader",use: "css-loader"})
+			},
+        	{
+        		test: /\.(svg|png|jpg|gif)$/,
+        		use: "file-loader"
+        	}
 		]
 	},
 

@@ -73,12 +73,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__terminal_bg_jpg__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__terminal_bg_jpg___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__terminal_bg_jpg__);
 /*
 * @Author: shengxingyue
 * @Date:   2017-10-14 20:03:39
 * @Last Modified by:   shengxingyue
-* @Last Modified time: 2017-10-15 11:47:01
+* @Last Modified time: 2017-10-15 13:43:37
 */
+
+
 
 
 function component() {
@@ -86,6 +90,10 @@ function component() {
 
 	element.innerHTML = __WEBPACK_IMPORTED_MODULE_0_lodash___default.a.join(['Hello', 'webpack'], ' ');
 	element.classList.add('hello');
+
+	var myIcon = new Image();
+	myIcon.src = __WEBPACK_IMPORTED_MODULE_2__terminal_bg_jpg___default.a;
+	element.appendChild(myIcon);
 
 	return element;
 }
@@ -17244,6 +17252,12 @@ module.exports = function(module) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "bb60f25588ba5b7b4d1697595c11af07.jpg";
 
 /***/ })
 /******/ ]);
